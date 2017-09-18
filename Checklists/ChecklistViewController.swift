@@ -75,9 +75,10 @@ class ChecklistViewController: UITableViewController {
         
         let item = items[indexPath.row]
         
+        
         configureText(for: cell, with: item)
         
-        configureCheckmark(for: cell, at: indexPath)
+        configureCheckmark(for: cell, with: item)
         
         return cell
         
@@ -88,9 +89,9 @@ class ChecklistViewController: UITableViewController {
         if let cell = tableView.cellForRow(at: indexPath) {
             
             let item = items[indexPath.row]
-            item.toggleChecked
+            item.toggleChecked()
             
-            configureCheckmark(for: cell, at: indexPath)
+            configureCheckmark(for: cell, with: item)
             
         }
         
@@ -98,8 +99,8 @@ class ChecklistViewController: UITableViewController {
         
     }
     
-    func configureCheckmark(for cell: UITableViewCell, at indexPath: IndexPath) {
-        
+    func configureCheckmark(for cell: UITableViewCell, with item: ChecklistItem) {
+    
         if item.checked {
             cell.accessoryType = .checkmark
         } else {
@@ -107,6 +108,7 @@ class ChecklistViewController: UITableViewController {
         }
         
     }
+    
     
     func configureText(for cell: UITableViewCell, with item: ChecklistItem) {
         
