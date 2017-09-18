@@ -14,3 +14,7 @@ class ChecklistItem {
     var checked = false
     
 }
+
+func toggleChecked() {
+    checked = !checked
+}
