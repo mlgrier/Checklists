@@ -76,7 +76,10 @@
                             <outlet property="delegate" destination="6pA-oo-Fly" id="rT5-Cu-GPW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Add Item" id="S8G-AI-vEs"/>
+                    <navigationItem key="navigationItem" title="Add Item" id="S8G-AI-vEs">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="kbn-OM-BJ7"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="X42-gW-zQz"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xlc-4i-J3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
