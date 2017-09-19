@@ -7,3 +7,20 @@
 //
 
 import Foundation
+import UIKit
+
+class AddItemViewController: UITableViewController {
+    
+    @IBAction func cancel(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func done(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+}

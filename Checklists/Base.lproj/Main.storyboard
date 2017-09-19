@@ -56,7 +56,7 @@
         <!--Add Item-->
         <scene sceneID="bZt-i3-suS">
             <objects>
-                <tableViewController id="6pA-oo-Fly" sceneMemberID="viewController">
+                <tableViewController id="6pA-oo-Fly" customClass="AddItemViewController" customModule="Checklists" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xxf-un-1nd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,8 +77,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Item" id="S8G-AI-vEs">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="kbn-OM-BJ7"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="X42-gW-zQz"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="kbn-OM-BJ7">
+                            <connections>
+                                <action selector="cancel:" destination="6pA-oo-Fly" id="o6K-iC-k8i"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="X42-gW-zQz">
+                            <connections>
+                                <action selector="done:" destination="6pA-oo-Fly" id="uHu-YM-ylb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xlc-4i-J3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
