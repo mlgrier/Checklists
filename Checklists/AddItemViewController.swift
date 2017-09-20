@@ -11,6 +11,8 @@ import UIKit
 
 class AddItemViewController: UITableViewController {
     
+    @IBOutlet weak var textField: UITextField!
+    
     @IBAction func cancel(_ sender: Any) {
         
         dismiss(animated: true, completion: nil)
@@ -18,6 +20,7 @@ class AddItemViewController: UITableViewController {
     }
     
     @IBAction func done(_ sender: Any) {
+        print("Contents of the text field: \(textField.text!)")
         
         dismiss(animated: true, completion: nil)
         
