@@ -30,4 +30,9 @@ class AddItemViewController: UITableViewController {
         return nil
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        textField.becomeFirstResponder()
+    }
+    
 }
